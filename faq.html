@@ -22,37 +22,42 @@
         </div>
 
         <div class="nav-links">
-            <a href="services.html" class="nav-link" style="color:#333;">Services</a>
-            <a href="products.html" class="nav-link" style="color:#333;">Products</a>
-            <a href="about.html" class="nav-link" style="color:#333;">About Us</a>
-            <a href="faq.html" class="nav-link" style="color:var(--brand-red);">FAQ</a>
-            <a href="index.html#contact" class="nav-link btn-nav">Contact</a>
+            <div class="lang-switch">
+                <span class="lang-btn" data-lang="en">EN</span>
+                <span style="color:var(--text-main); opacity:0.5;">|</span>
+                <span class="lang-btn" data-lang="id">ID</span>
+            </div>
+            <a href="services.html" class="nav-link" data-i18n="nav.services">Services</a>
+            <a href="products.html" class="nav-link" data-i18n="nav.products">Products</a>
+            <a href="about.html" class="nav-link" data-i18n="nav.about">About Us</a>
+            <a href="faq.html" class="nav-link" data-i18n="nav.faq" style="color:var(--brand-red);">FAQ</a>
+            <a href="index.html#contact" class="nav-link btn-nav" data-i18n="nav.contact">Contact</a>
         </div>
     </nav>
 
     <header class="page-header">
-        <h1>F.A.Q.</h1>
+        <h1 data-i18n="page.faq.title">F.A.Q.</h1>
     </header>
 
     <section class="faq-section">
-        <button class="accordion">Do you ship internationally? <i class="fa-solid fa-plus"></i></button>
+        <button class="accordion" data-i18n="faq.q1">Do you ship internationally? <i class="fa-solid fa-plus"></i></button>
         <div class="panel">
-            <p>Yes, we have logistics partners that handle shipping to major industrial hubs across Asia and Europe.</p>
+            <p data-i18n="faq.a1">Yes, we have logistics partners that handle shipping to major industrial hubs across Asia and Europe.</p>
         </div>
 
-        <button class="accordion">What is the warranty on tires? <i class="fa-solid fa-plus"></i></button>
+        <button class="accordion" data-i18n="faq.q2">What is the warranty on tires? <i class="fa-solid fa-plus"></i></button>
         <div class="panel">
-            <p>All our heavy-duty tires come with a standard 12-month manufacturer warranty against defects.</p>
+            <p data-i18n="faq.a2">All our heavy-duty tires come with a standard 12-month manufacturer warranty against defects.</p>
         </div>
 
-        <button class="accordion">Can I request a custom part? <i class="fa-solid fa-plus"></i></button>
+        <button class="accordion" data-i18n="faq.q3">Can I request a custom part? <i class="fa-solid fa-plus"></i></button>
         <div class="panel">
-            <p>Absolutely. Visit our Services page to learn about our Custom Fabrication options or contact us via WhatsApp.</p>
+            <p data-i18n="faq.a3">Absolutely. Visit our Services page to learn about our Custom Fabrication options or contact us via WhatsApp.</p>
         </div>
         
-        <button class="accordion">What payment methods do you accept? <i class="fa-solid fa-plus"></i></button>
+        <button class="accordion" data-i18n="faq.q4">What payment methods do you accept? <i class="fa-solid fa-plus"></i></button>
         <div class="panel">
-            <p>We accept Bank Transfers (BCA/Mandiri) for local clients, and Letter of Credit (L/C) for large international orders.</p>
+            <p data-i18n="faq.a4">We accept Bank Transfers (BCA/Mandiri) for local clients, and Letter of Credit (L/C) for large international orders.</p>
         </div>
     </section>
 

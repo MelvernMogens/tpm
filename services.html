@@ -22,40 +22,45 @@
         </div>
 
         <div class="nav-links">
-            <a href="services.html" class="nav-link" style="color:var(--brand-red);">Services</a>
-            <a href="products.html" class="nav-link" style="color:#333;">Products</a>
-            <a href="about.html" class="nav-link" style="color:#333;">About Us</a>
-            <a href="faq.html" class="nav-link" style="color:#333;">FAQ</a>
-            <a href="index.html#contact" class="nav-link btn-nav">Contact</a>
+            <div class="lang-switch">
+                <span class="lang-btn" data-lang="en">EN</span>
+                <span style="color:var(--text-main); opacity:0.5;">|</span>
+                <span class="lang-btn" data-lang="id">ID</span>
+            </div>
+            <a href="services.html" class="nav-link" data-i18n="nav.services" style="color:var(--brand-red);">Services</a>
+            <a href="products.html" class="nav-link" data-i18n="nav.products">Products</a>
+            <a href="about.html" class="nav-link" data-i18n="nav.about">About Us</a>
+            <a href="faq.html" class="nav-link" data-i18n="nav.faq">FAQ</a>
+            <a href="index.html#contact" class="nav-link btn-nav" data-i18n="nav.contact">Contact</a>
         </div>
     </nav>
 
     <header class="page-header">
-        <h1>OUR SERVICES</h1>
+        <h1 data-i18n="page.services.title">OUR SERVICES</h1>
     </header>
 
     <section class="services">
         <div class="grid-container">
-             <div class="card">
-                <span class="card-icon"><i class="fa-solid fa-gears"></i></span>
-                <h3>Custom Fabrication</h3>
-                <p>We don't just sell parts; we make them. Our workshop creates custom fittings for unique machinery requirements.</p>
-            </div>
-            <div class="card">
-                <span class="card-icon"><i class="fa-solid fa-truck-fast"></i></span>
-                <h3>24/7 Logistics</h3>
-                <p>Our fleet is ready to deliver critical components anywhere in the region within 24 hours.</p>
-            </div>
-            <div class="card">
-                <span class="card-icon"><i class="fa-solid fa-clipboard-check"></i></span>
-                <h3>Safety Audits</h3>
-                <p>Certified engineers inspect your site to ensure full compliance with industrial safety regulations.</p>
-            </div>
-            <div class="card">
-                <span class="card-icon"><i class="fa-solid fa-screwdriver-wrench"></i></span>
-                <h3>On-Site Repair</h3>
-                <p>Our mobile mechanic teams can perform emergency repairs on heavy loaders and excavators directly at your site.</p>
-            </div>
+               <div class="card">
+                    <span class="card-icon"><i class="fa-solid fa-gears"></i></span>
+                    <h3 data-i18n="service.card1.title">Custom Fabrication</h3>
+                    <p data-i18n="service.card1.desc">We don't just sell parts; we make them. Our workshop creates custom fittings for unique machinery requirements.</p>
+                </div>
+                <div class="card">
+                    <span class="card-icon"><i class="fa-solid fa-truck-fast"></i></span>
+                    <h3 data-i18n="service.card2.title">24/7 Logistics</h3>
+                    <p data-i18n="service.card2.desc">Our fleet is ready to deliver critical components anywhere in the region within 24 hours.</p>
+                </div>
+                <div class="card">
+                    <span class="card-icon"><i class="fa-solid fa-clipboard-check"></i></span>
+                    <h3 data-i18n="service.card3.title">Safety Audits</h3>
+                    <p data-i18n="service.card3.desc">Certified engineers inspect your site to ensure full compliance with industrial safety regulations.</p>
+                </div>
+                <div class="card">
+                    <span class="card-icon"><i class="fa-solid fa-screwdriver-wrench"></i></span>
+                    <h3 data-i18n="service.card4.title">On-Site Repair</h3>
+                    <p data-i18n="service.card4.desc">Our mobile mechanic teams can perform emergency repairs on heavy loaders and excavators directly at your site.</p>
+                </div>
         </div>
     </section>
 

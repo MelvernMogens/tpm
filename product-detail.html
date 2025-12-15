@@ -14,16 +14,21 @@
         <a href="index.html" class="logo"><img src="assets/logo.png" style="height:60px; border:2px solid var(--brand-blue); border-radius:15px; padding:5px;"></a>
         <div class="hamburger"><span class="bar" style="background:black;"></span><span class="bar" style="background:black;"></span><span class="bar" style="background:black;"></span></div>
         <div class="nav-links">
-            <a href="services.html" class="nav-link" style="color:#333;">Services</a>
-            <a href="products.html" class="nav-link" style="color:var(--brand-red);">Products</a>
-            <a href="about.html" class="nav-link" style="color:#333;">About Us</a>
-            <a href="faq.html" class="nav-link" style="color:#333;">FAQ</a>
-            <a href="index.html#contact" class="nav-link btn-nav">Contact</a>
+            <div class="lang-switch">
+                <span class="lang-btn" data-lang="en">EN</span>
+                <span style="color:var(--text-main); opacity:0.5;">|</span>
+                <span class="lang-btn" data-lang="id">ID</span>
+            </div>
+            <a href="services.html" class="nav-link" data-i18n="nav.services">Services</a>
+            <a href="products.html" class="nav-link" data-i18n="nav.products" style="color:var(--brand-red);">Products</a>
+            <a href="about.html" class="nav-link" data-i18n="nav.about">About Us</a>
+            <a href="faq.html" class="nav-link" data-i18n="nav.faq">FAQ</a>
+            <a href="index.html#contact" class="nav-link btn-nav" data-i18n="nav.contact">Contact</a>
         </div>
     </nav>
 
     <section class="detail-section">
-        <a href="products.html" class="back-link">&larr; Back to Catalog</a>
+        <a href="products.html" class="back-link" data-i18n="prod.back">&larr; Back to Catalog</a>
         
         <div class="detail-grid">
             <div class="detail-image-box">
@@ -37,19 +42,19 @@
                 <p id="p-desc">Please wait...</p>
                 
                 <div class="specs-box">
-                    <h3>Specifications</h3>
+                    <h3 data-i18n="prod.specs">Specifications</h3>
                     <table class="specs-table">
                         <tbody>
                             <tr>
-                                <td>Brand</td>
+                                <td data-i18n="prod.specs.brand">Brand</td>
                                 <td id="p-brand">-</td>
                             </tr>
                             <tr>
-                                <td>Model Code</td>
+                                <td data-i18n="prod.specs.code">Model Code</td>
                                 <td id="p-code">-</td>
                             </tr>
                             <tr>
-                                <td>Application</td>
+                                <td data-i18n="prod.specs.app">Application</td>
                                 <td id="p-app">-</td>
                             </tr>
                         </tbody>
@@ -57,7 +62,7 @@
                 </div>
 
                 <a href="https://wa.me/628123456789" class="btn-primary" style="margin-top:20px; display:inline-block;">
-                    <i class="fa-brands fa-whatsapp"></i> Request Quote
+                    <i class="fa-brands fa-whatsapp"></i> <span data-i18n="prod.request">Request Quote</span>
                 </a>
             </div>
         </div>

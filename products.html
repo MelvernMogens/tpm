@@ -13,16 +13,21 @@
         <a href="index.html" class="logo"><img src="assets/logo.png" style="height:60px; border:2px solid var(--brand-blue); border-radius:15px; padding:5px;"></a>
         <div class="hamburger"><span class="bar" style="background:black;"></span><span class="bar" style="background:black;"></span><span class="bar" style="background:black;"></span></div>
         <div class="nav-links">
-            <a href="services.html" class="nav-link" style="color:#333;">Services</a>
-            <a href="products.html" class="nav-link" style="color:var(--brand-red);">Products</a>
-            <a href="about.html" class="nav-link" style="color:#333;">About Us</a>
-            <a href="faq.html" class="nav-link" style="color:#333;">FAQ</a>
-            <a href="index.html#contact" class="nav-link btn-nav">Contact</a>
+            <div class="lang-switch">
+                <span class="lang-btn" data-lang="en">EN</span>
+                <span style="color:var(--text-main); opacity:0.5;">|</span>
+                <span class="lang-btn" data-lang="id">ID</span>
+            </div>
+            <a href="services.html" class="nav-link" data-i18n="nav.services">Services</a>
+            <a href="products.html" class="nav-link" data-i18n="nav.products" style="color:var(--brand-red);">Products</a>
+            <a href="about.html" class="nav-link" data-i18n="nav.about">About Us</a>
+            <a href="faq.html" class="nav-link" data-i18n="nav.faq">FAQ</a>
+            <a href="index.html#contact" class="nav-link btn-nav" data-i18n="nav.contact">Contact</a>
         </div>
     </nav>
 
     <header class="page-header">
-        <h1>PRODUCT CATALOG</h1>
+        <h1 data-i18n="page.products.title">PRODUCT CATALOG</h1>
     </header>
 
     <section class="products-section">
@@ -32,9 +37,9 @@
                     <i class="fa-solid fa-truck-monster fa-3x" style="color:#333;"></i>
                 </div>
                 <div class="product-info">
-                    <span class="product-category">Heavy Tires</span>
-                    <h3>Derock Super Mining</h3>
-                    <p>Heavy duty compound for rocky terrain.</p>
+                    <span class="product-category" data-i18n="card.derock.cat">Heavy Tires</span>
+                    <h3 data-i18n="card.derock.title">Derock Super Mining</h3>
+                    <p data-i18n="card.derock.desc">Heavy duty compound for rocky terrain.</p>
                 </div>
             </a>
 
@@ -43,9 +48,9 @@
                     <i class="fa-solid fa-road fa-3x" style="color:#333;"></i>
                 </div>
                 <div class="product-info">
-                    <span class="product-category">Commercial</span>
-                    <h3>Rapid Highway Star</h3>
-                    <p>Long-distance durability for logistics fleets.</p>
+                    <span class="product-category" data-i18n="card.rapid.cat">Commercial</span>
+                    <h3 data-i18n="card.rapid.title">Rapid Highway Star</h3>
+                    <p data-i18n="card.rapid.desc">Long-distance durability for logistics fleets.</p>
                 </div>
             </a>
 
@@ -54,20 +59,20 @@
                     <i class="fa-solid fa-oil-can fa-3x" style="color:#333;"></i>
                 </div>
                 <div class="product-info">
-                    <span class="product-category">Lubricants</span>
-                    <h3>TPM Hydraulic 68</h3>
-                    <p>High-viscosity oil for heavy machinery.</p>
+                    <span class="product-category" data-i18n="card.oil.cat">Lubricants</span>
+                    <h3 data-i18n="card.oil.title">TPM Hydraulic 68</h3>
+                    <p data-i18n="card.oil.desc">High-viscosity oil for heavy machinery.</p>
                 </div>
             </a>
             
-             <a href="product-detail.html?id=tools-jack" class="product-card" style="text-decoration:none; color:inherit;">
+            <a href="product-detail.html?id=tools-jack" class="product-card" style="text-decoration:none; color:inherit;">
                 <div class="product-img">
                     <i class="fa-solid fa-screwdriver-wrench fa-3x" style="color:#333;"></i>
                 </div>
                 <div class="product-info">
-                    <span class="product-category">Tools</span>
-                    <h3>Hydraulic Jack 50T</h3>
-                    <p>50-Ton lifting capacity for heavy equipment.</p>
+                    <span class="product-category" data-i18n="card.jack.cat">Tools</span>
+                    <h3 data-i18n="card.jack.title">Hydraulic Jack 50T</h3>
+                    <p data-i18n="card.jack.desc">50-Ton lifting capacity for heavy equipment.</p>
                 </div>
             </a>
         </div>

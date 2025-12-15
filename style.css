@@ -81,10 +81,10 @@ h1, h2, h3, .nav-link, .btn {
     transition: all 0.3s ease;
     
     /* ROUNDED RECTANGLE STYLING */
-    border-radius: 15px;    /* Soft rounded corners */
+    border-radius: 15px;      /* Soft rounded corners */
     border: 2px solid white; 
     background-color: white; 
-    padding: 5px;           /* Adds a little breathing room inside the white box */
+    padding: 5px;             /* Adds a little breathing room inside the white box */
 }
 
 /* Logo shrinks on scroll */
@@ -93,15 +93,26 @@ h1, h2, h3, .nav-link, .btn {
     border: 2px solid var(--brand-blue);
     border-radius: 10px; /* Corners get slightly sharper when small */
 }
-/* NAV LINKS (Default: White text) */
+
+/* * NAV LINKS CONTAINER (UPDATED FOR ALIGNMENT)
+ * Ensures .nav-links and .lang-switch are vertically centered.
+ */
+.nav-links { 
+    display: flex; 
+    gap: 2rem; 
+    align-items: center; /* NEW: Vertical alignment fix */
+}
+
+/* NAV LINKS (Default: White text) - UPDATED FOR BOLDNESS AND ALIGNMENT PADDING */
 .nav-link {
     text-decoration: none;
     color: white; 
-    font-weight: 500;
+    font-weight: 700; /* UPDATED: Made bold */
     letter-spacing: 1px;
     transition: color 0.3s;
     position: relative;
     text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    padding: 8px 0; /* NEW: Added padding for vertical alignment */
 }
 
 /* NAV LINKS (Scrolled: Dark text) */
@@ -150,7 +161,6 @@ h1, h2, h3, .nav-link, .btn {
 .hamburger.active .bar:nth-child(1) { transform: translateY(8px) rotate(45deg); }
 .hamburger.active .bar:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
 
-.nav-links { display: flex; gap: 2rem; }
 
 /* HERO */
 .hero {
@@ -473,4 +483,56 @@ footer { background: #111; color: #888; padding: 3rem 5%; font-size: 0.9rem; }
 @media (max-width: 768px) {
     .detail-grid { grid-template-columns: 1fr; }
     .detail-image-box { min-height: 250px; }
+}
+
+/* * LANGUAGE SWITCHER (UPDATED FOR ALIGNMENT AND BOLDNESS) 
+ */
+.lang-switch {
+    display: flex;
+    align-items: center; /* Ensures vertical centering */
+    gap: 8px; /* Space between EN and ID */
+    margin-right: 20px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.9rem;
+    z-index: 1002;
+    padding: 8px 0; /* NEW: Added padding for vertical alignment */
+}
+
+.lang-btn {
+    cursor: pointer;
+    font-weight: 700; /* UPDATED: Made bold */
+    opacity: 0.7;
+    transition: all 0.3s;
+    color: white; /* Default for transparent navbar */
+    padding-bottom: 2px;
+    border-bottom: 2px solid transparent;
+}
+
+/* Hover State */
+.lang-btn:hover {
+    opacity: 1;
+}
+
+/* Active State (Selected Language) */
+.lang-btn.active {
+    opacity: 1;
+    color: var(--brand-red) !important; /* Always red when active */
+    border-bottom: 2px solid var(--brand-red);
+}
+
+/* Scrolled Navbar or Mobile Menu overrides */
+.navbar.scrolled .lang-btn, 
+.nav-links .lang-btn {
+    color: var(--text-main);
+}
+
+/* Mobile Adjustment */
+@media (max-width: 768px) {
+    .lang-switch {
+        margin: 0 0 1.5rem 0; /* Adjust spacing in mobile menu */
+    }
+    .lang-btn {
+        font-size: 1.2rem;
+        color: var(--text-main); /* Force dark color in mobile menu */
+    }
 }
