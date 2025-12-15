@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Detail | TPM Industrial</title>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar scrolled" style="position:relative; background:white; border-bottom:3px solid var(--brand-blue);">
+        <a href="index.html" class="logo"><img src="assets/logo.png" style="height:60px; border:2px solid var(--brand-blue); border-radius:15px; padding:5px;"></a>
+        <div class="hamburger"><span class="bar" style="background:black;"></span><span class="bar" style="background:black;"></span><span class="bar" style="background:black;"></span></div>
+        <div class="nav-links">
+            <a href="services.html" class="nav-link" style="color:#333;">Services</a>
+            <a href="products.html" class="nav-link" style="color:var(--brand-red);">Products</a>
+            <a href="about.html" class="nav-link" style="color:#333;">About Us</a>
+            <a href="faq.html" class="nav-link" style="color:#333;">FAQ</a>
+            <a href="index.html#contact" class="nav-link btn-nav">Contact</a>
+        </div>
+    </nav>
+
+    <section class="detail-section">
+        <a href="products.html" class="back-link">&larr; Back to Catalog</a>
+        
+        <div class="detail-grid">
+            <div class="detail-image-box">
+                <img id="p-img" src="" alt="Product Image"> 
+                <div id="p-icon-placeholder" style="display:none; font-size:100px; color:#ddd;"><i class="fa-solid fa-box-open"></i></div>
+            </div>
+
+            <div class="detail-info">
+                <span id="p-category" class="detail-cat">CATEGORY</span>
+                <h1 id="p-title">Loading Product...</h1>
+                <p id="p-desc">Please wait...</p>
+                
+                <div class="specs-box">
+                    <h3>Specifications</h3>
+                    <table class="specs-table">
+                        <tbody>
+                            <tr>
+                                <td>Brand</td>
+                                <td id="p-brand">-</td>
+                            </tr>
+                            <tr>
+                                <td>Model Code</td>
+                                <td id="p-code">-</td>
+                            </tr>
+                            <tr>
+                                <td>Application</td>
+                                <td id="p-app">-</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <a href="https://wa.me/628123456789" class="btn-primary" style="margin-top:20px; display:inline-block;">
+                    <i class="fa-brands fa-whatsapp"></i> Request Quote
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <a href="https://wa.me/628123456789" class="whatsapp-float" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+    <script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TPM | Industrial Solutions</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="index.html" class="logo">
+            <img src="assets/logo.png" alt="TPM Logo">
+        </a>
+
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+
+        <div class="nav-links">
+            <a href="services.html" class="nav-link">Services</a>
+            <a href="products.html" class="nav-link">Products</a>
+            <a href="about.html" class="nav-link">About Us</a>
+            <a href="faq.html" class="nav-link">FAQ</a>
+            <a href="#contact" class="nav-link btn-nav">Contact</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content hidden">
+            <h1>Powering Modern Industry</h1>
+            <p>Reliable engineering solutions and raw material supply chain management. We keep your business moving.</p>
+            <a href="products.html" class="btn-primary">View Products</a>
+        </div>
+    </header>
+
+    <section class="services">
+        <div style="display:flex; justify-content:space-between; align-items:flex-end; margin-bottom:3rem;">
+            <h2 class="section-title hidden" style="margin-bottom:0; border:none;">Our Capabilities</h2>
+            <a href="services.html" style="color:var(--brand-red); font-weight:bold; text-decoration:none;">View All &rarr;</a>
+        </div>
+        
+        <div class="grid-container">
+            <div class="card hidden delay-100" onclick="location.href='services.html';" style="cursor:pointer;">
+                <span class="card-icon"><i class="fa-solid fa-gears"></i></span>
+                <h3>Precision Engineering</h3>
+                <p>High-tolerance component manufacturing and structural design.</p>
+            </div>
+            <div class="card hidden delay-200" onclick="location.href='services.html';" style="cursor:pointer;">
+                <span class="card-icon"><i class="fa-solid fa-truck-fast"></i></span>
+                <h3>Material Supply</h3>
+                <p>Direct sourcing of steel, polymers, and industrial raw materials.</p>
+            </div>
+            <div class="card hidden delay-300" onclick="location.href='services.html';" style="cursor:pointer;">
+                <span class="card-icon"><i class="fa-solid fa-helmet-safety"></i></span>
+                <h3>Maintenance & Safety</h3>
+                <p>Comprehensive site safety audits and machinery maintenance.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="brand-showcase">
+        <h2 class="showcase-title hidden">Official Distributor For</h2>
+        
+        <div class="brand-grid hidden delay-100">
+            <div class="brand-item">
+                <img src="assets/brand-derock.jpg" alt="Derock Tires">
+            </div>
+
+            <div class="brand-item">
+                <img src="assets/brand-rapid.jpg" alt="Rapid Tires">
+            </div>
+
+            <div class="brand-item">
+                <img src="assets/brand-derock.jpg" alt="Derock Tires">
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>TPM INDUSTRIAL</h4>
+                <p>Engineering the future with precision and integrity.</p>
+            </div>
+            <div class="footer-col">
+                <h4>QUICK LINKS</h4>
+                <a href="services.html">Services</a>
+                <a href="products.html">Products</a>
+                <a href="about.html">About Us</a>
+                <a href="faq.html">FAQ</a>
+            </div>
+            <div class="footer-col">
+                <h4>CONTACT</h4>
+                <a href="mailto:info@tpm.com">info@tpm-industrial.com</a>
+                <a href="tel:+62215550199">+62 (21) 555-0199</a>
+                <a href="#">Jakarta, Indonesia</a>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2025 TPM Industrial. All Rights Reserved.
+        </div>
+    </footer>
+
+    <a href="https://wa.me/628123456789?text=Hello%20TPM" class="whatsapp-float" target="_blank">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>
