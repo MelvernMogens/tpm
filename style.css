@@ -1,13 +1,13 @@
 /* ========================================= */
 /* 1. VARIABLES & RESET                      */
 /* ========================================= */
+/* ========================================= */
+/* 1. CORE THEME & RESET (Updated Font)      */
+/* ========================================= */
 :root {
-    /* Brand Colors */
     --brand-red: #C62828;
     --brand-blue: #0277BD;
     --brand-black: #1a1a1a;
-    
-    /* Neutrals */
     --bg-white: #ffffff;
     --bg-light: #F4F6F8;
     --text-main: #263238;
@@ -15,11 +15,10 @@
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
-
 html { scroll-behavior: smooth; }
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Montserrat', sans-serif; /* Changed from Roboto to Montserrat */
     color: var(--text-main);
     background-color: var(--bg-white);
     line-height: 1.6;
@@ -27,7 +26,8 @@ body {
 }
 
 h1, h2, h3, .nav-link, .btn, .btn-primary, .section-title, .showcase-title {
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Montserrat', sans-serif; /* Changed from Oswald to Montserrat */
+    font-weight: 700; /* Keeps headings bold and professional */
     text-transform: uppercase;
 }
 
@@ -73,7 +73,7 @@ h1, h2, h3, .nav-link, .btn, .btn-primary, .section-title, .showcase-title {
 }
 
 /* Links */
-.nav-links { display: flex; gap: 2rem; align-items: center; }
+.nav-links { display: flex; gap: 1.2rem; align-items: center; }
 
 .nav-link {
     text-decoration: none;
@@ -485,4 +485,74 @@ footer { background: #111; color: #888; padding: 3rem 5%; font-size: 0.9rem; }
     .hero h1 { font-size: 2.2rem; }
     .hero-content { padding: 1.5rem; margin: 0 1rem; width: 100%; }
     .city-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+}
+/* ========================================= */
+/* UPDATED LOGO & BRAND TEXT STYLING         */
+/* ========================================= */
+
+/* Container to hold Logo + Name */
+.logo-container {
+    display: flex;
+    flex-direction: column; /* Text goes under logo */
+    align-items: center;
+    text-decoration: none;
+    z-index: 1001;
+    transition: all 0.3s ease;
+}
+
+/* Bigger Logo for PC */
+.main-logo {
+    height: 100px; /* Increased from 80px */
+    width: auto;
+    background: #fff;
+    padding: 8px;
+    border-radius: 12px;
+    border: 2px solid white;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* The Company Name text */
+.brand-text {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 0.85rem;
+    color: white; /* Matches nav-links on hero */
+    margin-top: 8px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+/* --- SCROLLED STATE --- */
+.navbar.scrolled .main-logo {
+    height: 70px; /* Shrinks slightly but still bigger than before */
+    border: 2px solid var(--brand-blue);
+}
+
+.navbar.scrolled .brand-text {
+    color: var(--brand-blue); /* Turns Blue when scrolled */
+    text-shadow: none;
+    font-size: 0.75rem;
+}
+
+/* --- MOBILE SPECIFIC SIZES --- */
+@media (max-width: 768px) {
+    .main-logo {
+        height: 80px; /* Bigger logo on mobile */
+    }
+    
+    .brand-text {
+        font-size: 0.7rem;
+        max-width: 150px; /* Keeps text from getting too wide */
+        line-height: 1.2;
+    }
+    
+    /* Force dark colors for sub-pages or mobile menu */
+    .navbar.scrolled .brand-text,
+    .nav-links.active ~ .logo-container .brand-text {
+        color: var(--brand-blue);
+    }
 }
