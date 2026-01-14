@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product Detail | TPM Industrial</title>
+    <title>Product Detail | PT Triputra Permata Makmur</title>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
@@ -22,7 +22,7 @@
             <a href="services.html" class="nav-link" data-i18n="nav.services">Services</a>
             <a href="products.html" class="nav-link" data-i18n="nav.products" style="color:var(--brand-red);">Products</a>
             <a href="about.html" class="nav-link" data-i18n="nav.about">About Us</a>
-            <a href="faq.html" class="nav-link" data-i18n="nav.faq">FAQ</a>
+            <a href="distribution.html" class="nav-link" data-i18n="nav.dist">Distribution</a>
             <a href="index.html#contact" class="nav-link btn-nav" data-i18n="nav.contact">Contact</a>
         </div>
     </nav>
@@ -32,41 +32,56 @@
         
         <div class="detail-grid">
             <div class="detail-image-box">
-                <img id="p-img" src="" alt="Product Image"> 
-                <div id="p-icon-placeholder" style="display:none; font-size:100px; color:#ddd;"><i class="fa-solid fa-box-open"></i></div>
+                <img id="p-img" src="" alt="Product Image" style="display:none;"> 
+                <div id="p-icon-placeholder" style="font-size:100px; color:#ddd;"><i class="fa-solid fa-tire"></i></div>
             </div>
 
             <div class="detail-info">
                 <span id="p-category" class="detail-cat">CATEGORY</span>
-                <h1 id="p-title">Loading Product...</h1>
-                <p id="p-desc">Please wait...</p>
+                <h1 id="p-title">Product Name</h1>
+                
+                <div id="p-desc-container" style="margin-bottom: 2rem;">
+                    <ul id="p-bullets" style="padding-left: 20px; color: var(--text-light);">
+                        </ul>
+                </div>
                 
                 <div class="specs-box">
-                    <h3 data-i18n="prod.specs">Specifications</h3>
-                    <table class="specs-table">
-                        <tbody>
-                            <tr>
-                                <td data-i18n="prod.specs.brand">Brand</td>
-                                <td id="p-brand">-</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="prod.specs.code">Model Code</td>
-                                <td id="p-code">-</td>
-                            </tr>
-                            <tr>
-                                <td data-i18n="prod.specs.app">Application</td>
-                                <td id="p-app">-</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <h3 data-i18n="prod.specs">Technical Specifications</h3>
+                    <div id="table-container">
+                        </div>
                 </div>
 
-                <a href="https://wa.me/628123456789" class="btn-primary" style="margin-top:20px; display:inline-block;">
+                <a href="https://wa.me/628123456789" class="btn-primary" style="margin-top:30px; display:inline-block;">
                     <i class="fa-brands fa-whatsapp"></i> <span data-i18n="prod.request">Request Quote</span>
                 </a>
             </div>
         </div>
     </section>
+
+    <footer id="contact">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>PT TRIPUTRA PERMATA MAKMUR</h4>
+                <p data-i18n="footer.desc">Engineering the future with precision and integrity.</p>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer.links">QUICK LINKS</h4>
+                <a href="services.html" data-i18n="nav.services">Services</a>
+                <a href="products.html" data-i18n="nav.products">Products</a>
+                <a href="about.html" data-i18n="nav.about">About Us</a>
+                <a href="distribution.html" data-i18n="nav.dist">Distribution</a>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer.contact">CONTACT</h4>
+                <a href="mailto:info@tpm-industrial.com"><i class="fa-solid fa-envelope"></i> info@tpm-industrial.com</a>
+                <a href="tel:+62215550199"><i class="fa-solid fa-phone"></i> +62 (21) 555-0199</a>
+                <p><i class="fa-solid fa-location-dot"></i> Jakarta, Indonesia</p>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2026 PT Triputra Permata Makmur. All Rights Reserved.
+        </div>
+    </footer>
 
     <a href="https://wa.me/628123456789" class="whatsapp-float" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
     <script src="script.js"></script>

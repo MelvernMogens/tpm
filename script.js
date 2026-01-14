@@ -8,377 +8,433 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentLang = localStorage.getItem('site-lang') || 'en';
 
     // THE TRANSLATION DICTIONARY
-    // You will use these keys (e.g., 'nav.home') in your HTML later.
-const translations = {
-    en: {
-        'nav.services': 'Services',
-        'nav.about': 'About Us',
-        'nav.products': 'Products',
-        'nav.faq': 'FAQ',
-        'nav.contact': 'Contact',
-        'hero.title': 'Powering Modern Industry',
-        'hero.desc': 'Reliable engineering solutions and raw material supply chain management. We keep your business moving.',
-        'hero.btn': 'View Products',
-        
-        // Index Page Keys
-        'serv.title': 'Our Capabilities',
-        'serv.viewall': 'View All',
-        'serv.card1.title': 'Precision Engineering',
-        'serv.card1.desc': 'High-tolerance component manufacturing and structural design.',
-        'serv.card2.title': 'Material Supply',
-        'serv.card2.desc': 'Direct sourcing of steel, polymers, and industrial raw materials.',
-        'serv.card3.title': 'Maintenance & Safety',
-        'serv.card3.desc': 'Comprehensive site safety audits and machinery maintenance.',
-        'brand.title': 'Official Distributor For',
-        
-        // Footer Keys
-        'footer.links': 'Quick Links',
-        'footer.desc': 'Engineering the future with precision and integrity.',
-        'footer.contact': 'Contact',
-        
-        // products.html Keys
-        'page.products.title': 'PRODUCT CATALOG',
-        'card.derock.cat': 'Heavy Tires',
-        'card.derock.title': 'Derock Super Mining',
-        'card.derock.desc': 'Heavy duty compound for rocky terrain.',
-        'card.rapid.cat': 'Commercial',
-        'card.rapid.title': 'Rapid Highway Star',
-        'card.rapid.desc': 'Long-distance durability for logistics fleets.',
-        'card.oil.cat': 'Lubricants',
-        'card.oil.title': 'TPM Hydraulic 68',
-        'card.oil.desc': 'High-viscosity oil for heavy machinery.',
-        'card.jack.cat': 'Tools',
-        'card.jack.title': 'Hydraulic Jack 50T',
-        'card.jack.desc': '50-Ton lifting capacity for heavy equipment.',
-        
-        // product-detail.html Keys
-        'prod.back': 'Back to Catalog',
-        'prod.specs': 'Specifications',
-        'prod.specs.brand': 'Brand',
-        'prod.specs.code': 'Model Code',
-        'prod.specs.app': 'Application',
-        'prod.request': 'Request Quote', // Button text
-        'prod.notfound': 'Product Not Found',
-        'prod.return': 'Please return to the products page.',
+    const translations = {
+        en: {
+            // --- NAVBAR ---
+            'nav.services': 'Services',
+            'nav.about': 'About Us',
+            'nav.products': 'Products',
+            'nav.dist': 'Distribution',
+            'nav.contact': 'Contact',
+            
+            // --- HERO (INDEX) ---
+            'hero.title': 'Powering Modern Industry',
+            'hero.desc': 'Reliable engineering solutions and raw material supply chain management. We keep your business moving.',
+            'hero.btn': 'View Products',
+            
+            // --- INDEX PAGE (CARDS LAYOUT) ---
+            'serv.title': 'Our Capabilities',
+            'serv.viewall': 'View All',
+            'serv.card1.title': 'Precision Engineering',
+            'serv.card1.desc': 'High-tolerance component manufacturing and structural design.',
+            'serv.card2.title': 'Material Supply',
+            'serv.card2.desc': 'Direct sourcing of steel, polymers, and industrial raw materials.',
+            'serv.card3.title': 'Maintenance & Safety',
+            'serv.card3.desc': 'Comprehensive site safety audits and machinery maintenance.',
+            'brand.title': 'Official Distributor For',
+            
+            // --- SERVICES PAGE (DIAMONDS LAYOUT) ---
+            'page.services.title': 'OUR VALUES & SERVICES',
+            'val.q1.title': 'Quality Products',
+            'val.q1.desc': 'Innovating to provide quality tire products based on analysis of mining conditions in Indonesia.',
+            'val.q2.title': 'Wide Distribution',
+            'val.q2.desc': 'Extensive distribution network, especially in mining areas.',
+            'val.q3.title': 'Stock Availability',
+            'val.q3.desc': 'Stock availability across the entire distribution network to accelerate delivery.',
+            'val.q4.title': 'Trusted Partner',
+            'val.q4.desc': 'Trusted by leading mining companies in Indonesia.',
 
-        // faq.html Keys
-        'page.faq.title': 'F.A.Q.',
-        'faq.q1': 'Do you ship internationally?',
-        'faq.a1': 'Yes, we have logistics partners that handle shipping to major industrial hubs across Asia and Europe.',
-        'faq.q2': 'What is the warranty on tires?',
-        'faq.a2': 'All our heavy-duty tires come with a standard 12-month manufacturer warranty against defects.',
-        'faq.q3': 'Can I request a custom part?',
-        'faq.a3': 'Absolutely. Visit our Services page to learn about our Custom Fabrication options or contact us via WhatsApp.',
-        'faq.q4': 'What payment methods do you accept?',
-        'faq.a4': 'We accept Bank Transfers (BCA/Mandiri) for local clients, and Letter of Credit (L/C) for large international orders.',
-        
-        // about.html Keys
-        'page.about.title': 'WHO WE ARE',
-        'about.h2': 'DRIVING INDUSTRY FORWARD SINCE 2010',
-        'about.p1': 'TPM Industrial started as a small tire distributor and has grown into a comprehensive industrial solutions provider. We believe in raw power, precision engineering, and unbreakable supply chains.',
-        'about.h3': 'OUR MISSION',
-        'about.p2': 'To provide high-grade industrial components with zero-delay logistics. We partner with the world\'s leading manufacturers like Derock and Rapid to bring you quality you can trust.',
-        
-        // services.html Keys
-        'page.services.title': 'OUR SERVICES',
-        'service.card1.title': 'Custom Fabrication',
-        'service.card1.desc': "We don't just sell parts; we make them. Our workshop creates custom fittings for unique machinery requirements.",
-        'service.card2.title': '24/7 Logistics',
-        'service.card2.desc': 'Our fleet is ready to deliver critical components anywhere in the region within 24 hours.',
-        'service.card3.title': 'Safety Audits',
-        'service.card3.desc': 'Certified engineers inspect your site to ensure full compliance with industrial safety regulations.',
-        'service.card4.title': 'On-Site Repair',
-        'service.card4.desc': 'Our mobile mechanic teams can perform emergency repairs on heavy loaders and excavators directly at your site.',
+            // --- ABOUT US (UPDATED) ---
+            'page.about.title': 'ABOUT US',
+            'about.new.p1': 'PT Triputra Permata Makmur, established in June 2025, is a company engaged in the import and distribution of truck and bus tires. We provide high-quality radial tires from China under the RAPID and DEROCK brands. Both brands are known as reliable, strong, and durable Heavy Duty imported tires, specifically designed to meet fleet needs across various road conditions, ranging from mining roads and rocky terrain to asphalt.',
+            'about.new.p2': 'Throughout our business journey, PT Triputra Permata Makmur continues to demonstrate significant growth and progress. This is inseparable from our commitment to maintaining product quality, professional work ethics, and building long-term trust with partners and customers. This trust becomes our main capital in creating sustainable cooperation and providing the best solutions for your fleet needs.',
+            
+            // --- DISTRIBUTION PAGE ---
+            'page.dist.title': 'DISTRIBUTION CHANNEL',
+            'dist.desc': "To optimize the distribution of products and services to various locations or customers. PT. Triputra Permata Makmur's distribution network is spread throughout Indonesia.",
 
-    },
-    id: {
-        'nav.services': 'Layanan',
-        'nav.about': 'Tentang Kami',
-        'nav.products': 'Produk',
-        'nav.faq': 'FAQ',
-        'nav.contact': 'Hubungi',
-        'hero.title': 'Menggerakkan Industri Modern',
-        'hero.desc': 'Solusi teknik andal dan manajemen rantai pasok bahan baku. Kami menjaga bisnis Anda terus bergerak.',
-        'hero.btn': 'Lihat Produk',
+            // --- PRODUCT CATALOG ---
+            'page.products.title': 'PRODUCT CATALOG',
+            'prod.back': 'Back to Catalog',
+            'prod.specs': 'Technical Specifications',
+            'prod.request': 'Request Quote',
+            'prod.notfound': 'Product Not Found',
+            'prod.return': 'Please return to the products page.',
 
-        // Index Page Keys
-        'serv.title': 'Kemampuan Kami',
-        'serv.viewall': 'Lihat Semua',
-        'serv.card1.title': 'Teknik Presisi',
-        'serv.card1.desc': 'Manufaktur komponen toleransi tinggi dan desain struktural.',
-        'serv.card2.title': 'Pasokan Material',
-        'serv.card2.desc': 'Sumber langsung baja, polimer, dan bahan baku industri.',
-        'serv.card3.title': 'Perawatan & K3',
-        'serv.card3.desc': 'Audit keselamatan lokasi yang komprehensif dan pemeliharaan mesin.',
-        'brand.title': 'Distributor Resmi Untuk',
+            // --- PRODUCT CARD DESCRIPTIONS ---
+            'card.rd52.desc': 'Suitable for use at mining inside. Short distance with low speed.',
+            'card.rs10hd.desc': 'More Load - More Distance. Suitable for steer and free-rolling positions.',
+            'card.rd51.desc': 'For medium hauling with bad roads. Excellent stone cleaning design.',
+            'card.ra20.desc': 'Suitable for carrying more loads. Low heat generation build-up.',
+            'card.rd31hd.desc': 'More Traction - More Loads. Mixed highway and freeway application.',
+            'card.rd50hd.desc': 'Special for long hauling with unpaved roads. Extreme load capacity.',
+            'card.ra21hd.desc': 'Extreme Heavy Load Purpose. Super steel belt carcass construction.',
 
-        // Footer Keys
-        'footer.links': 'Tautan Cepat',
-        'footer.desc': 'Merekayasa masa depan dengan presisi dan integritas.',
-        'footer.contact': 'Kontak',
+            // --- FOOTER ---
+            'footer.links': 'Quick Links',
+            'footer.desc': 'Engineering the future with precision and integrity.',
+            'footer.contact': 'Contact',
+        },
 
-        // products.html Keys
-        'page.products.title': 'KATALOG PRODUK',
-        'card.derock.cat': 'Ban Alat Berat',
-        'card.derock.title': 'Derock Super Mining',
-        'card.derock.desc': 'Kompon tugas berat untuk medan berbatu.',
-        'card.rapid.cat': 'Komersial',
-        'card.rapid.title': 'Rapid Highway Star',
-        'card.rapid.desc': 'Daya tahan jarak jauh untuk armada logistik.',
-        'card.oil.cat': 'Pelumas',
-        'card.oil.title': 'TPM Hydraulic 68',
-        'card.oil.desc': 'Oli viskositas tinggi untuk alat berat.',
-        'card.jack.cat': 'Perkakas',
-        'card.jack.title': 'Dongkrak Hidrolik 50T',
-        'card.jack.desc': 'Kapasitas angkat 50 ton untuk alat berat.',
+        id: {
+            // --- NAVBAR ---
+            'nav.services': 'Layanan',
+            'nav.about': 'Tentang Kami',
+            'nav.products': 'Produk',
+            'nav.dist': 'Distribusi',
+            'nav.contact': 'Hubungi',
+            
+            // --- HERO (INDEX) ---
+            'hero.title': 'Menggerakkan Industri Modern',
+            'hero.desc': 'Solusi teknik andal dan manajemen rantai pasok bahan baku.',
+            'hero.btn': 'Lihat Produk',
 
-        // product-detail.html Keys
-        'prod.back': 'Kembali ke Katalog',
-        'prod.specs': 'Spesifikasi',
-        'prod.specs.brand': 'Merek',
-        'prod.specs.code': 'Kode Model',
-        'prod.specs.app': 'Aplikasi',
-        'prod.request': 'Minta Penawaran',
-        'prod.notfound': 'Produk Tidak Ditemukan',
-        'prod.return': 'Silakan kembali ke halaman produk.',
+            // --- INDEX PAGE (CARDS LAYOUT) ---
+            'serv.title': 'Kemampuan Kami',
+            'serv.viewall': 'Lihat Semua',
+            'serv.card1.title': 'Teknik Presisi',
+            'serv.card1.desc': 'Manufaktur komponen toleransi tinggi dan desain struktural.',
+            'serv.card2.title': 'Pasokan Material',
+            'serv.card2.desc': 'Sumber langsung baja, polimer, dan bahan baku industri.',
+            'serv.card3.title': 'Perawatan & K3',
+            'serv.card3.desc': 'Audit keselamatan lokasi yang komprehensif dan pemeliharaan mesin.',
+            'brand.title': 'Distributor Resmi Untuk',
 
-        // faq.html Keys
-        'page.faq.title': 'F.A.Q.',
-        'faq.q1': 'Apakah Anda mengirim secara internasional?',
-        'faq.a1': 'Ya, kami memiliki mitra logistik yang menangani pengiriman ke pusat industri utama di seluruh Asia dan Eropa.',
-        'faq.q2': 'Apa garansi ban?',
-        'faq.a2': 'Semua ban alat berat kami dilengkapi dengan garansi pabrik standar 12 bulan terhadap cacat.',
-        'faq.q3': 'Bisakah saya meminta bagian yang dipesan khusus?',
-        'faq.a3': 'Tentu. Kunjungi halaman Layanan kami untuk mempelajari opsi Fabrikasi Kustom kami atau hubungi kami melalui WhatsApp.',
-        'faq.q4': 'Metode pembayaran apa yang Anda terima?',
-        'faq.a4': 'Kami menerima Transfer Bank (BCA/Mandiri) untuk klien lokal, dan Letter of Credit (L/C) untuk pesanan internasional besar.',
+            // --- SERVICES PAGE (DIAMONDS LAYOUT) ---
+            'page.services.title': 'NILAI & LAYANAN KAMI',
+            'val.q1.title': 'Produk Berkualitas',
+            'val.q1.desc': 'Berinovasi menyediakan produk ban berkualitas berdasarkan analisa kondisi tambang di Indonesia.',
+            'val.q2.title': 'Jaringan Distribusi Luas',
+            'val.q2.desc': 'Jaringan distribusi yang luas terutama di daerah pertambangan.',
+            'val.q3.title': 'Ketersediaan Barang (Stockist)',
+            'val.q3.desc': 'Ketersediaan stok di seluruh jaringan distribusi sehingga mempercepat delivery.',
+            'val.q4.title': 'Terpercaya',
+            'val.q4.desc': 'Dipercaya oleh perusahaan-perusahaan tambang terkemuka di Indonesia.',
 
-        // about.html Keys
-        'page.about.title': 'SIAPA KAMI',
-        'about.h2': 'MEMAJUKAN INDUSTRI SEJAK 2010',
-        'about.p1': 'TPM Industrial dimulai sebagai distributor ban kecil dan telah berkembang menjadi penyedia solusi industri yang komprehensif. Kami percaya pada kekuatan mentah, rekayasa presisi, dan rantai pasokan yang tidak terputus.',
-        'about.h3': 'MISI KAMI',
-        'about.p2': 'Menyediakan komponen industri bermutu tinggi dengan logistik tanpa penundaan. Kami bermitra dengan produsen terkemuka dunia seperti Derock dan Rapid untuk memberikan kualitas yang dapat Anda percaya.',
-        
-        // services.html Keys
-        'page.services.title': 'LAYANAN KAMI',
-        'service.card1.title': 'Fabrikasi Kustom',
-        'service.card1.desc': 'Kami tidak hanya menjual suku cadang; kami membuatnya. Bengkel kami menciptakan perlengkapan kustom untuk kebutuhan mesin yang unik.',
-        'service.card2.title': 'Logistik 24/7',
-        'service.card2.desc': 'Armada kami siap mengirimkan komponen penting di mana saja di wilayah ini dalam waktu 24 jam.',
-        'service.card3.title': 'Audit Keselamatan',
-        'service.card3.desc': 'Insinyur bersertifikat memeriksa lokasi Anda untuk memastikan kepatuhan penuh terhadap peraturan keselamatan industri.',
-        'service.card4.title': 'Perbaikan di Tempat',
-        'service.card4.desc': 'Tim mekanik bergerak kami dapat melakukan perbaikan darurat pada pemuat berat dan ekskavator langsung di lokasi Anda.',
-    }
-};
+            // --- ABOUT US (UPDATED) ---
+            'page.about.title': 'TENTANG KAMI',
+            'about.new.p1': 'PT Triputra Permata Makmur, didirikan pada Juni 2025, merupakan perusahaan yang bergerak di bidang impor dan distribusi ban truk dan bus. Kami menghadirkan ban tipe radial berkualitas tinggi yang berasal dari China dengan merek RAPID dan DEROCK. Kedua merek ini dikenal sebagai ban impor Heavy Duty yang andal, kuat, dan tahan lama, dirancang khusus untuk memenuhi kebutuhan armada pada berbagai kondisi jalan mulai dari jalan tambang, jalan berbatu, hingga jalan aspal.',
+            'about.new.p2': 'Seiring perjalanan bisnis kami, PT Triputra Permata Makmur terus menunjukkan pertumbuhan dan kemajuan yang signifikan. Hal ini tidak terlepas dari komitmen kami dalam menjaga kualitas produk, profesionalisme kerja, serta membangun kepercayaan jangka panjang dengan para mitra dan pelanggan. Kepercayaan tersebut menjadi modal utama kami dalam menciptakan kerja sama yang berkelanjutan dan memberikan solusi terbaik bagi kebutuhan armada Anda.',
+
+            // --- DISTRIBUTION PAGE ---
+            'page.dist.title': 'SALURAN DISTRIBUSI',
+            'dist.desc': 'Untuk mengoptimalkan distribusi produk atau layanan ke berbagai lokasi atau pelanggan. Jaringan distribusi PT. Triputra Permata Makmur sudah tersebar diseluruh Indonesia.',
+
+            // --- PRODUCT CATALOG ---
+            'page.products.title': 'KATALOG PRODUK',
+            'prod.back': 'Kembali ke Katalog',
+            'prod.specs': 'Spesifikasi Teknis',
+            'prod.request': 'Minta Penawaran',
+            'prod.notfound': 'Produk Tidak Ditemukan',
+            'prod.return': 'Silakan kembali ke halaman produk.',
+
+            // --- PRODUCT CARD DESCRIPTIONS ---
+            'card.rd52.desc': 'Cocok untuk penggunaan di dalam tambang. Jarak pendek dengan kecepatan rendah.',
+            'card.rs10hd.desc': 'Muatan Lebih - Jarak Lebih. Cocok untuk posisi steer dan free-rolling.',
+            'card.rd51.desc': 'Untuk pengangkutan menengah dengan jalan buruk. Desain pembersih batu yang sangat baik.',
+            'card.ra20.desc': 'Cocok untuk membawa muatan lebih banyak. Pembentukan panas rendah.',
+            'card.rd31hd.desc': 'Traksi Lebih - Muatan Lebih. Aplikasi campuran jalan raya dan jalan bebas hambatan.',
+            'card.rd50hd.desc': 'Khusus untuk pengangkutan jarak jauh dengan jalan tidak beraspal. Kapasitas beban ekstrem.',
+            'card.ra21hd.desc': 'Tujuan Muatan Sangat Berat. Konstruksi karkas sabuk baja super.',
+
+            // --- FOOTER ---
+            'footer.links': 'Tautan Cepat',
+            'footer.desc': 'Merekayasa masa depan dengan presisi dan integritas.',
+            'footer.contact': 'Kontak',
+        }
+    };
+
     // =========================================
-    // 1. SCROLL NAVBAR EFFECT
+    // 1. NAVBAR & UI LOGIC
     // =========================================
     const navbar = document.querySelector('.navbar');
-    if (navbar && !navbar.style.position.includes('relative')) {
+    if (navbar) {
         window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
+            if (window.scrollY > 50) navbar.classList.add('scrolled');
+            else navbar.classList.remove('scrolled');
         });
     }
 
-    // =========================================
-    // 2. SCROLL REVEAL ANIMATION
-    // =========================================
     const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('show');
-            }
+            if (entry.isIntersecting) entry.target.classList.add('show');
         });
     });
-    const hiddenElements = document.querySelectorAll('.hidden');
-    hiddenElements.forEach((el) => observer.observe(el));
+    document.querySelectorAll('.hidden').forEach((el) => observer.observe(el));
 
-    // =========================================
-    // 3. MOBILE HAMBURGER MENU
-    // =========================================
     const hamburger = document.querySelector('.hamburger');
     const navLinks = document.querySelector('.nav-links');
-    const links = document.querySelectorAll('.nav-link');
-
     if (hamburger) {
         hamburger.addEventListener('click', () => {
             navLinks.classList.toggle('active');
             hamburger.classList.toggle('active');
         });
-
-        links.forEach(link => {
-            link.addEventListener('click', () => {
-                navLinks.classList.remove('active');
-                hamburger.classList.remove('active');
-            });
-        });
     }
 
     // =========================================
-    // 4. FAQ ACCORDION LOGIC
+    // 2. PRODUCT DATABASE (BILINGUAL BULLETS)
     // =========================================
-    const accordions = document.getElementsByClassName("accordion");
-    for (let i = 0; i < accordions.length; i++) {
-        accordions[i].addEventListener("click", function() {
-            this.classList.toggle("active");
-            const panel = this.nextElementSibling;
-            if (panel.style.maxHeight) {
-                panel.style.maxHeight = null;
-            } else {
-                panel.style.maxHeight = panel.scrollHeight + "px";
-            }
-            const icon = this.querySelector('i');
-            if (icon) {
-                if (icon.classList.contains('fa-plus')) {
-                    icon.classList.remove('fa-plus');
-                    icon.classList.add('fa-minus');
-                } else {
-                    icon.classList.remove('fa-minus');
-                    icon.classList.add('fa-plus');
-                }
-            }
-        });
-    }
-
-    // =========================================
-    // 5. PRODUCT DATABASE (BILINGUAL)
-    // =========================================
-    // I updated the structure: title, category, description, and app are now Objects {en: "...", id: "..."}
     const productDatabase = {
-        'derock-mining': {
-            title: { en: "Derock Super Mining XL", id: "Derock Super Mining XL" },
-            category: { en: "HEAVY DUTY TIRES", id: "BAN ALAT BERAT" },
-            img: "assets/product-derock.jpg", 
-            description: { 
-                en: "Engineered for the toughest terrains. The Derock Mining XL features cut-resistant compounds and an extra-deep tread depth to ensure longevity in quarry and mining operations.",
-                id: "Dirancang untuk medan terberat. Derock Mining XL memiliki kompon tahan potong dan tapak ekstra dalam untuk memastikan umur panjang dalam operasi tambang dan galian."
+        'rd52': {
+            title: "RD52",
+            category: "OFFROAD",
+            img: "assets/rd52.jpeg", 
+            bullets: {
+                en: [
+                    "Applicable for driving wheels. Suitable for short distance with low speed on mining site.",
+                    "Excellent wide pattern design offers traction on bad road conditions.",
+                    "Special tread compound offers excellent cut resistance."
+                ],
+                id: [
+                    "Berlaku untuk roda penggerak. Cocok untuk jarak pendek dengan kecepatan rendah di lokasi tambang.",
+                    "Desain pola lebar yang sangat baik menawarkan traksi pada kondisi jalan buruk.",
+                    "Kompon tapak khusus menawarkan ketahanan potong yang sangat baik."
+                ]
             },
-            brand: "Derock",
-            code: "DR-500-XL",
-            app: { en: "Mining / Quarry / Off-Road", id: "Tambang / Galian / Off-Road" }
+            specs: [
+                { size: "11.00R20", pr: "18PR", depth: "25.0", load: "6,500 (Dual)", psi: "180" },
+                { size: "12.00R20", pr: "20PR", depth: "25.0", load: "6,570 (Dual)", psi: "170" }
+            ]
         },
-        'rapid-highway': {
-            title: { en: "Rapid Highway Star", id: "Rapid Highway Star" },
-            category: { en: "COMMERCIAL TIRES", id: "BAN KOMERSIAL" },
-            img: "assets/product-rapid.jpg", 
-            description: { 
-                en: "Maximize your fleet's efficiency. The Highway Star offers low rolling resistance for fuel economy and a specialized rib design for wet weather stability.",
-                id: "Maksimalkan efisiensi armada Anda. Highway Star menawarkan hambatan gulir rendah untuk hemat bahan bakar dan desain rusuk khusus untuk stabilitas cuaca basah."
+        'rs10hd': {
+            title: "RS10HD",
+            category: "REGIONAL",
+            img: "assets/rs10hd.jpeg",
+            bullets: {
+                en: [
+                    "Wider tread spreads load over a larger area, promoting long, even wear.",
+                    "Straight simple rib pattern improves even wearing and efficient water evacuation.",
+                    "Cross rib sipes slice through water for solid control on wet roads.",
+                    "Decoupling tread design suitable for long distance travel."
+                ],
+                id: [
+                    "Tapak yang lebih lebar menyebarkan beban ke area yang lebih luas, mendukung keausan yang panjang dan merata.",
+                    "Pola rusuk lurus sederhana meningkatkan keausan merata dan evakuasi air yang efisien.",
+                    "Sipe rusuk silang membelah air untuk kontrol yang solid di jalan basah.",
+                    "Desain tapak decoupling cocok untuk perjalanan jarak jauh."
+                ]
             },
-            brand: "Rapid",
-            code: "RP-HWAY-22",
-            app: { en: "Logistics / Highway Transport", id: "Logistik / Angkutan Jalan Raya" }
+            specs: [
+                { size: "7.50R16LT", pr: "14PR", depth: "13.5", load: "3,300 (Single)", psi: "180" }
+            ]
         },
-        'ind-oil': {
-            title: { en: "TPM Hydraulic 68", id: "TPM Hydraulic 68" },
-            category: { en: "INDUSTRIAL LUBRICANTS", id: "PELUMAS INDUSTRI" },
-            img: "assets/product-oil.jpg", 
-            description: { 
-                en: "Premium anti-wear hydraulic oil designed for high-pressure industrial systems. Provides excellent oxidation stability and corrosion protection.",
-                id: "Oli hidrolik anti-aus premium yang dirancang untuk sistem industri tekanan tinggi. Memberikan stabilitas oksidasi dan perlindungan korosi yang sangat baik."
+        'rd51': {
+            title: "RD51",
+            category: "OFFROAD",
+            img: "assets/rd51.jpeg",
+            bullets: {
+                en: [
+                    "Drive Pattern, applicable for driving wheels.",
+                    "Suitable for medium distance with low speed on mining and bad or hard roads.",
+                    "Excellent groove design to help easier self stone cleaning or ejection.",
+                    "Strongest on bead and crown to get more mileage on bad road conditions."
+                ],
+                id: [
+                    "Pola Penggerak, berlaku untuk roda penggerak.",
+                    "Cocok untuk jarak menengah dengan kecepatan rendah di tambang dan jalan buruk atau keras.",
+                    "Desain alur yang sangat baik untuk membantu pembersihan atau pelepasan batu sendiri dengan lebih mudah.",
+                    "Terkuat pada bead dan crown untuk mendapatkan jarak tempuh lebih banyak pada kondisi jalan buruk."
+                ]
             },
-            brand: "TPM Oils",
-            code: "TPM-HYD-68",
-            app: { en: "Hydraulic Systems / Heavy Machinery", id: "Sistem Hidrolik / Alat Berat" }
+            specs: [
+                { size: "11.00R20", pr: "18PR", depth: "24.0", load: "6,500 (Dual)", psi: "180" },
+                { size: "12.00R20", pr: "20PR", depth: "25.0", load: "6,570 (Dual)", psi: "170" }
+            ]
         },
-        'tools-jack': {
-            title: { en: "Hydraulic Jack 50T", id: "Dongkrak Hidrolik 50T" },
-            category: { en: "TOOLS & HARDWARE", id: "PERKAKAS & HARDWARE" },
-            img: "assets/product-jack.jpg", 
-            description: { 
-                en: "Heavy-duty lifting jack with a 50-ton capacity. Constructed from high-grade steel with safety overload protection.",
-                id: "Dongkrak angkat tugas berat dengan kapasitas 50 ton. Dibuat dari baja bermutu tinggi dengan perlindungan kelebihan beban."
+        'ra20': {
+            title: "RA20",
+            category: "REGIONAL",
+            img: "assets/ra20.jpeg",
+            bullets: {
+                en: [
+                    "Special tread compound and four ribs offering low heat generation build-up.",
+                    "Super steel belt carcass enhance high load capacity."
+                ],
+                id: [
+                    "Kompon tapak khusus dan empat rusuk menawarkan pembentukan panas rendah.",
+                    "Karkas sabuk baja super meningkatkan kapasitas beban tinggi."
+                ]
             },
-            brand: "TPM Tools",
-            code: "JACK-50T",
-            app: { en: "Workshop / Field Repair", id: "Bengkel / Perbaikan Lapangan" }
+            specs: [
+                { size: "10.00R20", pr: "18PR", depth: "16.0", load: "5,400 (Dual)", psi: "170" }
+            ]
+        },
+        'rd31hd': {
+            title: "RD31HD",
+            category: "ON & OFF ROAD",
+            img: "assets/rd31hd.jpeg",
+            bullets: {
+                en: [
+                    "Mixed highway and freeway application. Drive position of heavy-duty truck for on/off road application.",
+                    "Special tread compound and design provide low heat build-up, excellent puncture and cut resistance."
+                ],
+                id: [
+                    "Aplikasi campuran jalan raya dan jalan bebas hambatan. Posisi penggerak truk tugas berat untuk aplikasi on/off road.",
+                    "Kompon dan desain tapak khusus memberikan pembentukan panas rendah, ketahanan tusuk dan potong yang sangat baik."
+                ]
+            },
+            specs: [
+                { size: "7.50R16LT", pr: "14PR", depth: "14.5", load: "3,300 (Single)", psi: "180" },
+                { size: "8.25R16LT", pr: "16PR", depth: "15.2", load: "3,680 (Dual)", psi: "180" }
+            ]
+        },
+        'rd50hd': {
+            title: "RD50 (HD)",
+            category: "OFFROAD",
+            img: "assets/rd50hd.jpeg",
+            bullets: {
+                en: [
+                    "Traction Pattern for driving wheels.",
+                    "Suitable for long distance with low speed on mining and bad roads.",
+                    "Special tread compound offers excellent cut resistance.",
+                    "Reinforced bead area reduces deformation and provides extreme load capacity."
+                ],
+                id: [
+                    "Pola Traksi untuk roda penggerak.",
+                    "Cocok untuk jarak jauh dengan kecepatan rendah di tambang dan jalan buruk.",
+                    "Kompon tapak khusus menawarkan ketahanan potong yang sangat baik.",
+                    "Area bead yang diperkuat mengurangi deformasi dan memberikan kapasitas beban ekstrem."
+                ]
+            },
+            specs: [
+                { size: "7.50R16LT(HD)", pr: "14PR", depth: "16.5", load: "3,300 (Dual)", psi: "180" },
+                { size: "10.00R20", pr: "18PR", depth: "23.0", load: "6,000 (Dual)", psi: "180" },
+                { size: "11.00R20", pr: "18PR", depth: "24.0", load: "6,500 (Dual)", psi: "180" },
+                { size: "12.00R20", pr: "20PR", depth: "24.0", load: "6,570 (Dual)", psi: "170" },
+                { size: "12.00R24", pr: "20PR", depth: "30.0", load: "6,600 (Dual)", psi: "170" }
+            ]
+        },
+        'ra21hd': {
+            title: "RA21 (HD)",
+            category: "REGIONAL",
+            img: "assets/ra21hd.jpeg",
+            bullets: {
+                en: [
+                    "Special tread compound and design enable low heat build-up, excellent puncture and cut resistance.",
+                    "Super steel belt carcass construction enhances casing strength and maximizes tyre load capacity."
+                ],
+                id: [
+                    "Kompon dan desain tapak khusus memungkinkan pembentukan panas rendah, ketahanan tusuk dan potong yang sangat baik.",
+                    "Konstruksi karkas sabuk baja super meningkatkan kekuatan casing dan memaksimalkan kapasitas beban ban."
+                ]
+            },
+            specs: [
+                { size: "7.50R16LT(HD)", pr: "14PR", depth: "15.0", load: "3,300 (Dual)", psi: "180" },
+                { size: "8.25R16LT(HD)", pr: "16PR", depth: "16.0", load: "3,680 (Dual)", psi: "180" },
+                { size: "10.00R20", pr: "18PR", depth: "17.0", load: "6,900 (Dual)", psi: "180" },
+                { size: "11.00R20", pr: "18PR", depth: "17.0", load: "6,500 (Dual)", psi: "180" }
+            ]
         }
     };
 
     // =========================================
-    // 6. LANGUAGE LOGIC FUNCTIONS
+    // 3. RENDER PRODUCT DETAIL
     // =========================================
-
-    // Function to apply language to the page
-    function applyLanguage(lang) {
-        // 1. Update all static text with data-i18n attribute
-        const elements = document.querySelectorAll('[data-i18n]');
-        elements.forEach(el => {
-            const key = el.getAttribute('data-i18n');
-            if (translations[lang] && translations[lang][key]) {
-                el.textContent = translations[lang][key];
-            }
-        });
-
-        // 2. Update Toggle Buttons Styling
-        document.querySelectorAll('.lang-btn').forEach(btn => {
-            btn.classList.remove('active');
-            if (btn.getAttribute('data-lang') === lang) {
-                btn.classList.add('active');
-            }
-        });
-
-        // 3. Re-render Product Details if we are on that page
-        if (window.location.pathname.includes('product-detail.html')) {
-            renderProductDetail(lang);
-        }
-
-        // 4. Save to storage
-        localStorage.setItem('site-lang', lang);
-        currentLang = lang;
-    }
-
-    // Function specifically for Product Detail Page
     function renderProductDetail(lang) {
         const urlParams = new URLSearchParams(window.location.search);
         const productId = urlParams.get('id');
         const product = productDatabase[productId];
 
         if (product) {
-            // Notice we use [lang] to access the correct string
-            document.getElementById('p-title').textContent = product.title[lang];
-            document.getElementById('p-category').textContent = product.category[lang];
-            document.getElementById('p-desc').textContent = product.description[lang];
-            document.getElementById('p-app').textContent = product.app[lang];
+            // Basic Info
+            document.getElementById('p-title').textContent = product.title;
+            document.getElementById('p-category').textContent = product.category;
             
-            // Fixed fields (Brand/Code usually don't change)
-            document.getElementById('p-brand').textContent = product.brand;
-            document.getElementById('p-code').textContent = product.code;
-
+            // Image Logic
             const imgEl = document.getElementById('p-img');
+            const placeholder = document.getElementById('p-icon-placeholder');
             imgEl.src = product.img; 
+            imgEl.style.display = 'block';
             imgEl.onerror = function() {
                 this.style.display = 'none';
-                const placeholder = document.getElementById('p-icon-placeholder');
                 if(placeholder) placeholder.style.display = 'block';
             };
-        } else {
-            const titleEl = document.getElementById('p-title');
-            const descEl = document.getElementById('p-desc');
-            const specsBox = document.querySelector('.specs-box');
+            if(placeholder) placeholder.style.display = 'none';
 
-            if(titleEl) titleEl.textContent = translations[lang]['prod.notfound'];
-            if(descEl) descEl.textContent = translations[lang]['prod.return'];
-            if(specsBox) specsBox.style.display = 'none';
+            // Bullet Points (NOW BILINGUAL)
+            const bulletList = document.getElementById('p-bullets');
+            bulletList.innerHTML = ''; // clear old
+            
+            // Safety check: defaults to English if specific lang is missing
+            const bulletsToUse = product.bullets[lang] || product.bullets['en'];
+            
+            bulletsToUse.forEach(bullet => {
+                const li = document.createElement('li');
+                li.textContent = bullet;
+                li.style.marginBottom = "10px";
+                bulletList.appendChild(li);
+            });
+
+            // Build Spec Table
+            const tableContainer = document.getElementById('table-container');
+            let tableHTML = `
+                <table class="tech-table">
+                    <thead>
+                        <tr>
+                            <th>Size</th>
+                            <th>PR</th>
+                            <th>Depth (mm)</th>
+                            <th>PSI</th>
+                            <th>Max Load (KG)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+            `;
+            
+            product.specs.forEach(spec => {
+                tableHTML += `
+                    <tr>
+                        <td><strong>${spec.size}</strong></td>
+                        <td>${spec.pr}</td>
+                        <td>${spec.depth}</td>
+                        <td>${spec.psi}</td>
+                        <td>${spec.load}</td>
+                    </tr>
+                `;
+            });
+
+            tableHTML += `</tbody></table>`;
+            tableContainer.innerHTML = tableHTML;
+
+        } else {
+            // Not Found logic
+            document.getElementById('p-title').textContent = translations[lang]['prod.notfound'];
+            document.getElementById('p-bullets').innerHTML = '';
+            document.getElementById('table-container').style.display = 'none';
         }
     }
 
-    // Event Listeners for Switch Buttons
-    const langBtns = document.querySelectorAll('.lang-btn');
-    langBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-            const selectedLang = btn.getAttribute('data-lang');
-            applyLanguage(selectedLang);
+    // =========================================
+    // 4. LANGUAGE FUNCTIONS
+    // =========================================
+    function applyLanguage(lang) {
+        // Update Static Text
+        document.querySelectorAll('[data-i18n]').forEach(el => {
+            const key = el.getAttribute('data-i18n');
+            if (translations[lang] && translations[lang][key]) {
+                el.textContent = translations[lang][key];
+            }
         });
+
+        // Update Toggle Buttons
+        document.querySelectorAll('.lang-btn').forEach(btn => {
+            btn.classList.remove('active');
+            if (btn.getAttribute('data-lang') === lang) btn.classList.add('active');
+        });
+
+        // Update Detail Page if active
+        if (window.location.pathname.includes('product-detail.html')) {
+            renderProductDetail(lang);
+        }
+
+        localStorage.setItem('site-lang', lang);
+        currentLang = lang;
+    }
+
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.addEventListener('click', () => applyLanguage(btn.getAttribute('data-lang')));
     });
 
-    // Initialize Language on Load
+    // Initialize
     applyLanguage(currentLang);
-
 });

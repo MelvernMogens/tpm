@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services | TPM Industrial</title>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <title>Services | PT Triputra Permata Makmur</title>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -12,7 +12,7 @@
 
     <nav class="navbar scrolled" style="position:relative; background:white; border-bottom:3px solid var(--brand-blue);">
         <a href="index.html" class="logo">
-            <img src="assets/logo.png" style="height:60px; border:2px solid var(--brand-blue); border-radius:15px; padding:5px;">
+            <img src="assets/logo.png" alt="Logo">
         </a>
         
         <div class="hamburger">
@@ -30,41 +30,89 @@
             <a href="services.html" class="nav-link" data-i18n="nav.services" style="color:var(--brand-red);">Services</a>
             <a href="products.html" class="nav-link" data-i18n="nav.products">Products</a>
             <a href="about.html" class="nav-link" data-i18n="nav.about">About Us</a>
-            <a href="faq.html" class="nav-link" data-i18n="nav.faq">FAQ</a>
+            <a href="distribution.html" class="nav-link" data-i18n="nav.dist">Distribution</a>
             <a href="index.html#contact" class="nav-link btn-nav" data-i18n="nav.contact">Contact</a>
         </div>
     </nav>
 
-    <header class="page-header">
-        <h1 data-i18n="page.services.title">OUR SERVICES</h1>
+    <header class="page-header" style="background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?q=80&w=2070&auto=format&fit=crop');">
+        <h1 data-i18n="page.services.title">OUR VALUES & SERVICES</h1>
     </header>
 
-    <section class="services">
-        <div class="grid-container">
-               <div class="card">
-                    <span class="card-icon"><i class="fa-solid fa-gears"></i></span>
-                    <h3 data-i18n="service.card1.title">Custom Fabrication</h3>
-                    <p data-i18n="service.card1.desc">We don't just sell parts; we make them. Our workshop creates custom fittings for unique machinery requirements.</p>
+    <section class="values-section">
+        <div class="values-grid">
+            
+            <div class="value-card hidden">
+                <div class="diamond-wrapper">
+                    <div class="diamond">
+                        <i class="fa-solid fa-certificate inner-icon"></i>
+                    </div>
                 </div>
-                <div class="card">
-                    <span class="card-icon"><i class="fa-solid fa-truck-fast"></i></span>
-                    <h3 data-i18n="service.card2.title">24/7 Logistics</h3>
-                    <p data-i18n="service.card2.desc">Our fleet is ready to deliver critical components anywhere in the region within 24 hours.</p>
+                <h3 data-i18n="val.q1.title">Quality Products</h3>
+                <p data-i18n="val.q1.desc">Innovating to provide quality tire products based on analysis of mining conditions in Indonesia.</p>
+            </div>
+
+            <div class="value-card hidden delay-100">
+                <div class="diamond-wrapper">
+                    <div class="diamond">
+                        <i class="fa-solid fa-map-location-dot inner-icon"></i>
+                    </div>
                 </div>
-                <div class="card">
-                    <span class="card-icon"><i class="fa-solid fa-clipboard-check"></i></span>
-                    <h3 data-i18n="service.card3.title">Safety Audits</h3>
-                    <p data-i18n="service.card3.desc">Certified engineers inspect your site to ensure full compliance with industrial safety regulations.</p>
+                <h3 data-i18n="val.q2.title">Wide Distribution</h3>
+                <p data-i18n="val.q2.desc">Extensive distribution network, especially in mining areas.</p>
+            </div>
+
+            <div class="value-card hidden delay-200">
+                <div class="diamond-wrapper">
+                    <div class="diamond">
+                        <i class="fa-solid fa-cubes-stacked inner-icon"></i>
+                    </div>
                 </div>
-                <div class="card">
-                    <span class="card-icon"><i class="fa-solid fa-screwdriver-wrench"></i></span>
-                    <h3 data-i18n="service.card4.title">On-Site Repair</h3>
-                    <p data-i18n="service.card4.desc">Our mobile mechanic teams can perform emergency repairs on heavy loaders and excavators directly at your site.</p>
+                <h3 data-i18n="val.q3.title">Stock Availability</h3>
+                <p data-i18n="val.q3.desc">Stock availability across the entire distribution network to accelerate delivery.</p>
+            </div>
+
+            <div class="value-card hidden delay-300">
+                <div class="diamond-wrapper">
+                    <div class="diamond">
+                        <i class="fa-solid fa-handshake inner-icon"></i>
+                    </div>
                 </div>
+                <h3 data-i18n="val.q4.title">Trusted Partner</h3>
+                <p data-i18n="val.q4.desc">Trusted by leading mining companies in Indonesia.</p>
+            </div>
+
         </div>
     </section>
 
-    <a href="https://wa.me/628123456789" class="whatsapp-float" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+    <footer id="contact">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>PT TRIPUTRA PERMATA MAKMUR</h4>
+                <p data-i18n="footer.desc">Engineering the future with precision and integrity.</p>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer.links">QUICK LINKS</h4>
+                <a href="services.html" data-i18n="nav.services">Services</a>
+                <a href="products.html" data-i18n="nav.products">Products</a>
+                <a href="about.html" data-i18n="nav.about">About Us</a>
+                <a href="distribution.html" data-i18n="nav.dist">Distribution</a>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer.contact">CONTACT</h4>
+                <a href="mailto:info@tpm-industrial.com"><i class="fa-solid fa-envelope"></i> info@tpm-industrial.com</a>
+                <a href="tel:+62215550199"><i class="fa-solid fa-phone"></i> +62 (21) 555-0199</a>
+                <p><i class="fa-solid fa-location-dot"></i> Jakarta, Indonesia</p>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2026 PT Triputra Permata Makmur. All Rights Reserved.
+        </div>
+    </footer>
+
+    <a href="https://wa.me/628123456789" class="whatsapp-float" target="_blank">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
     <script src="script.js"></script>
 </body>
 </html>

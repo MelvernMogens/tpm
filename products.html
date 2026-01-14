@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Products | TPM Industrial</title>
+    <title>Products | PT Triputra Permata Makmur</title>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <nav class="navbar scrolled" style="position:relative; background:white; border-bottom:3px solid var(--brand-blue);">
-        <a href="index.html" class="logo"><img src="assets/logo.png" style="height:60px; border:2px solid var(--brand-blue); border-radius:15px; padding:5px;"></a>
+        <a href="index.html" class="logo"><img src="assets/logo.png" style="height:60px; border:2px solid var(--brand-blue); border-radius:15px; padding:5px;" alt="Logo"></a>
         <div class="hamburger"><span class="bar" style="background:black;"></span><span class="bar" style="background:black;"></span><span class="bar" style="background:black;"></span></div>
         <div class="nav-links">
             <div class="lang-switch">
@@ -21,62 +21,129 @@
             <a href="services.html" class="nav-link" data-i18n="nav.services">Services</a>
             <a href="products.html" class="nav-link" data-i18n="nav.products" style="color:var(--brand-red);">Products</a>
             <a href="about.html" class="nav-link" data-i18n="nav.about">About Us</a>
-            <a href="faq.html" class="nav-link" data-i18n="nav.faq">FAQ</a>
+            <a href="distribution.html" class="nav-link" data-i18n="nav.dist">Distribution</a>
             <a href="index.html#contact" class="nav-link btn-nav" data-i18n="nav.contact">Contact</a>
         </div>
     </nav>
 
-    <header class="page-header">
+    <header class="page-header" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1580913428706-c311ab527ebc?q=80&w=2070&auto=format&fit=crop');">
         <h1 data-i18n="page.products.title">PRODUCT CATALOG</h1>
     </header>
 
     <section class="products-section">
         <div class="grid-container">
-            <a href="product-detail.html?id=derock-mining" class="product-card" style="text-decoration:none; color:inherit;">
-                <div class="product-img">
-                    <i class="fa-solid fa-truck-monster fa-3x" style="color:#333;"></i>
-                </div>
-                <div class="product-info">
-                    <span class="product-category" data-i18n="card.derock.cat">Heavy Tires</span>
-                    <h3 data-i18n="card.derock.title">Derock Super Mining</h3>
-                    <p data-i18n="card.derock.desc">Heavy duty compound for rocky terrain.</p>
-                </div>
-            </a>
-
-            <a href="product-detail.html?id=rapid-highway" class="product-card" style="text-decoration:none; color:inherit;">
-                <div class="product-img">
-                    <i class="fa-solid fa-road fa-3x" style="color:#333;"></i>
-                </div>
-                <div class="product-info">
-                    <span class="product-category" data-i18n="card.rapid.cat">Commercial</span>
-                    <h3 data-i18n="card.rapid.title">Rapid Highway Star</h3>
-                    <p data-i18n="card.rapid.desc">Long-distance durability for logistics fleets.</p>
-                </div>
-            </a>
-
-            <a href="product-detail.html?id=ind-oil" class="product-card" style="text-decoration:none; color:inherit;">
-                <div class="product-img">
-                    <i class="fa-solid fa-oil-can fa-3x" style="color:#333;"></i>
-                </div>
-                <div class="product-info">
-                    <span class="product-category" data-i18n="card.oil.cat">Lubricants</span>
-                    <h3 data-i18n="card.oil.title">TPM Hydraulic 68</h3>
-                    <p data-i18n="card.oil.desc">High-viscosity oil for heavy machinery.</p>
-                </div>
-            </a>
             
-            <a href="product-detail.html?id=tools-jack" class="product-card" style="text-decoration:none; color:inherit;">
+            <a href="product-detail.html?id=rd52" class="product-card">
                 <div class="product-img">
-                    <i class="fa-solid fa-screwdriver-wrench fa-3x" style="color:#333;"></i>
+                    <span class="cat-badge">Offroad</span>
+                    <img src="assets/rd52.jpeg" alt="RD52">
                 </div>
                 <div class="product-info">
-                    <span class="product-category" data-i18n="card.jack.cat">Tools</span>
-                    <h3 data-i18n="card.jack.title">Hydraulic Jack 50T</h3>
-                    <p data-i18n="card.jack.desc">50-Ton lifting capacity for heavy equipment.</p>
+                    <h3>RD52</h3>
+                    <p data-i18n="card.rd52.desc">Suitable for use at mining inside. Short distance with low speed.</p>
+                    <span class="view-btn">View Specs &rarr;</span>
                 </div>
             </a>
+
+            <a href="product-detail.html?id=rs10hd" class="product-card">
+                <div class="product-img">
+                    <span class="cat-badge">Regional</span>
+                    <img src="assets/rs10hd.jpeg" alt="RS10HD">
+                </div>
+                <div class="product-info">
+                    <h3>RS10HD</h3>
+                    <p data-i18n="card.rs10hd.desc">More Load - More Distance. Suitable for steer and free-rolling positions.</p>
+                    <span class="view-btn">View Specs &rarr;</span>
+                </div>
+            </a>
+
+            <a href="product-detail.html?id=rd51" class="product-card">
+                <div class="product-img">
+                    <span class="cat-badge">Offroad</span>
+                    <img src="assets/rd51.jpeg" alt="RD51">
+                </div>
+                <div class="product-info">
+                    <h3>RD51</h3>
+                    <p data-i18n="card.rd51.desc">For medium hauling with bad roads. Excellent stone cleaning design.</p>
+                    <span class="view-btn">View Specs &rarr;</span>
+                </div>
+            </a>
+
+            <a href="product-detail.html?id=ra20" class="product-card">
+                <div class="product-img">
+                    <span class="cat-badge">Regional</span>
+                    <img src="assets/ra20.jpeg" alt="RA20">
+                </div>
+                <div class="product-info">
+                    <h3>RA20</h3>
+                    <p data-i18n="card.ra20.desc">Suitable for carrying more loads. Low heat generation build-up.</p>
+                    <span class="view-btn">View Specs &rarr;</span>
+                </div>
+            </a>
+
+            <a href="product-detail.html?id=rd31hd" class="product-card">
+                <div class="product-img">
+                    <span class="cat-badge">On & Off Road</span>
+                    <img src="assets/rd31hd.jpeg" alt="RD31HD">
+                </div>
+                <div class="product-info">
+                    <h3>RD31HD</h3>
+                    <p data-i18n="card.rd31hd.desc">More Traction - More Loads. Mixed highway and freeway application.</p>
+                    <span class="view-btn">View Specs &rarr;</span>
+                </div>
+            </a>
+
+            <a href="product-detail.html?id=rd50hd" class="product-card">
+                <div class="product-img">
+                    <span class="cat-badge">Offroad</span>
+                    <img src="assets/rd50hd.jpeg" alt="RD50HD">
+                </div>
+                <div class="product-info">
+                    <h3>RD50 (HD)</h3>
+                    <p data-i18n="card.rd50hd.desc">Special for long hauling with unpaved roads. Extreme load capacity.</p>
+                    <span class="view-btn">View Specs &rarr;</span>
+                </div>
+            </a>
+
+            <a href="product-detail.html?id=ra21hd" class="product-card">
+                <div class="product-img">
+                    <span class="cat-badge">Regional</span>
+                    <img src="assets/ra21hd.jpeg" alt="RA21HD">
+                </div>
+                <div class="product-info">
+                    <h3>RA21 (HD)</h3>
+                    <p data-i18n="card.ra21hd.desc">Extreme Heavy Load Purpose. Super steel belt carcass construction.</p>
+                    <span class="view-btn">View Specs &rarr;</span>
+                </div>
+            </a>
+
         </div>
     </section>
+
+    <footer id="contact">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>PT TRIPUTRA PERMATA MAKMUR</h4>
+                <p data-i18n="footer.desc">Engineering the future with precision and integrity.</p>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer.links">QUICK LINKS</h4>
+                <a href="services.html" data-i18n="nav.services">Services</a>
+                <a href="products.html" data-i18n="nav.products">Products</a>
+                <a href="about.html" data-i18n="nav.about">About Us</a>
+                <a href="distribution.html" data-i18n="nav.dist">Distribution</a>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer.contact">CONTACT</h4>
+                <a href="mailto:info@tpm-industrial.com"><i class="fa-solid fa-envelope"></i> info@tpm-industrial.com</a>
+                <a href="tel:+62215550199"><i class="fa-solid fa-phone"></i> +62 (21) 555-0199</a>
+                <p><i class="fa-solid fa-location-dot"></i> Jakarta, Indonesia</p>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2026 PT Triputra Permata Makmur. All Rights Reserved.
+        </div>
+    </footer>
 
     <a href="https://wa.me/628123456789" class="whatsapp-float" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
     <script src="script.js"></script>
